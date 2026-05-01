@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Приют Онлайн — UI прототип</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🐾 Приют Онлайн</div>
+    <button class="btn ghost">Войти</button>
+  </header>
+
+  <main class="app-grid">
+    <aside class="sidebar">
+      <h3>Экраны</h3>
+      <nav>
+        <a href="#auth">Вход / регистрация</a>
+        <a href="#feed">Главная лента</a>
+        <a href="#shelters">Каталог приютов</a>
+        <a href="#animals">Каталог животных</a>
+        <a href="#shelter-profile">Профиль приюта</a>
+        <a href="#animal-profile">Профиль животного</a>
+        <a href="#subscribe">Оформление подписки</a>
+        <a href="#dashboard">Панель приюта</a>
+        <a href="#notifications">Уведомления</a>
+      </nav>
+    </aside>
+
+    <section class="content">
+      <div class="palette card">
+        <h2>Дизайн-система</h2>
+        <p>Тёплый, чистый интерфейс. Все основные действия — в 1–2 касания.</p>
+        <div class="badges">
+          <span class="badge urgent">Срочно</span>
+          <span class="badge guardian">Виртуальный опекун</span>
+          <span class="badge friend">Друг приюта</span>
+          <span class="badge home">Ищет дом</span>
+          <span class="badge healed">На лечении</span>
+          <span class="badge adopted">Пристроен</span>
+        </div>
+      </div>
+
+      <article id="auth" class="screen card">
+        <h2>8.1 Вход / регистрация</h2>
+        <div class="phone">
+          <h3>Добро пожаловать</h3>
+          <input placeholder="Телефон или email" />
+          <button class="btn primary">Продолжить</button>
+          <div class="row">
+            <button class="btn">Google</button>
+            <button class="btn">VK</button>
+          </div>
+          <p>Выберите роль:</p>
+          <div class="row">
+            <button class="btn active">Пользователь</button>
+            <button class="btn">Приют</button>
+            <button class="btn">Админ</button>
+          </div>
+        </div>
+      </article>
+
+      <article id="feed" class="screen card">
+        <h2>8.2 Главная лента</h2>
+        <div class="banner">
+          <span class="badge urgent">Срочный сбор</span>
+          <h3>Операция для Бима — нужно 120 000 ₽</h3>
+          <div class="progress"><span style="width:67%"></span></div>
+        </div>
+        <div class="cards three">
+          <div class="tile">🐕 Карточка животного + подписка</div>
+          <div class="tile">🏠 Карточка приюта + донат</div>
+          <div class="tile">🎥 Новости и видео</div>
+        </div>
+      </article>
+
+      <article id="shelters" class="screen card"><h2>8.3 Каталог приютов</h2><p>Поиск, фильтры (город, тип животных, срочные нужды, кол-во подопечных), список/сетка.</p></article>
+      <article id="animals" class="screen card"><h2>8.4 Каталог животных</h2><p>Фото-карточки, быстрые статусы, фильтры по виду/возрасту/полу/состоянию/опекунству.</p></article>
+
+      <article id="shelter-profile" class="screen card">
+        <h2>8.5 Профиль приюта</h2>
+        <div class="cards two">
+          <div class="tile">Обложка, описание, город, счётчик подписчиков</div>
+          <div class="tile">Закреплённый блок: Подписаться / Пожертвовать</div>
+        </div>
+      </article>
+
+      <article id="animal-profile" class="screen card">
+        <h2>8.6 Профиль животного</h2>
+        <div class="cards two">
+          <div class="tile">Галерея, история, статус, кто помогает</div>
+          <div class="tile">CTA: Стать опекуном / Поддержать сейчас</div>
+        </div>
+      </article>
+
+      <article id="subscribe" class="screen card">
+        <h2>8.7 Оформление подписки</h2>
+        <label>Сумма в месяц</label><input value="1500"/>
+        <label>Направление помощи</label>
+        <select><option>На питомца</option><option>На приют</option><option>Срочный сбор</option></select>
+        <div class="consent">
+          <input type="checkbox" checked id="auto"/>
+          <label for="auto">Если подопечного пристроят, автоперевести платёж на другое животное/экстренный фонд</label>
+        </div>
+        <a href="#">Подробные условия</a>
+        <button class="btn primary">Подтвердить платёж</button>
+      </article>
+
+      <article id="dashboard" class="screen card">
+        <h2>8.8 Панель приюта</h2>
+        <div class="cards three">
+          <div class="tile">+ Добавить животное</div>
+          <div class="tile">✏️ Редактировать карточки</div>
+          <div class="tile">📊 Статистика, подписчики, сборы</div>
+        </div>
+      </article>
+
+      <article id="notifications" class="screen card">
+        <h2>8.9 Уведомления</h2>
+        <ul>
+          <li>Новый пост приюта</li>
+          <li>Животное пристроено → показан сценарий перевода</li>
+          <li>Срочно нужна помощь</li>
+          <li>Подписка продлена / отменена</li>
+          <li>Автоперевод сработал + отчёт о расходовании средств</li>
+        </ul>
+      </article>
+
+      <article class="screen card">
+        <h2>Состояния интерфейса</h2>
+        <div class="badges">
+          <span class="badge">Пусто</span><span class="badge">Загрузка</span><span class="badge">Ошибка загрузки</span>
+          <span class="badge">Нет животных</span><span class="badge">Приют не верифицирован</span><span class="badge">Уже подписан</span>
+          <span class="badge">Успешная оплата</span><span class="badge">Ошибка оплаты</span>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
